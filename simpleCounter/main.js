@@ -1,12 +1,11 @@
 let arrowUp = document.querySelector('.up');
 let arrowDown = document.querySelector('.down');
-let nmbBox = document.querySelector('.numberContainer');
-let nmb = 0;
+let nmb = document.querySelector('.number');
 
 arrowUp.addEventListener('click', () => {
-    nmbBox.innerHTML = ++nmb;
+    ++nmb.innerHTML;
 });
 
 arrowDown.addEventListener('click', () => {
-    nmbBox.innerHTML = --nmb;
+    --nmb.innerHTML;
 });
