@@ -7,21 +7,14 @@ body {
 .appContainer {
     margin: 0 auto;
     text-align: center;
-    display: flex;
-    flex: row nowrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+    grid-template-rows: 100vh;
+    column-gap: 20px;
     justify-content: center;
     align-items: center;
-    width: 80%;
-    height: 90vh;
+    min-width: 80%;
     max-width: 90%;
-}
-
-.arrowContainer {
-    background-color: #ccc;
-    width: 100px;
-    height: 100px;
-    padding: 2%;
-    border-radius: 11%;
 }
 
 .numberContainer {
@@ -29,48 +22,73 @@ body {
     padding: 2%;
     color: #f55;
     font-weight: bold;
-    font-size: 7.8rem;
-    line-height: 80%;
-    margin: 0 5%;
 }
 
 .numberContainer p {
     height: 100%;
+    font-size: 16vmin;
+    line-height: 80%;
     margin: 0;
 }
 
+
+.arrowContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    background-color: #ccc;
+    min-width: 6vw;
+    min-height: 10vh;
+    max-width: 8vw;
+    padding: 20px;
+    border-radius: 11%;
+}
+.arrowContainer.down,
+.arrowContainer.up {
+    grid-template-rows: 1fr;
+}
+
 .arrowTipLine {
-    height: 35%;
-    width: 35%;
     margin: 0 auto;
-    position: relative;
     transform: rotate(-45deg);
     border-radius: 11%;
 }
 
+.tenUp .line1 {
+    transform: translateY(15px) rotate(-45deg);
+}
 .up .line1 {
-    top: 17%;
+    transform: translateY(25%) rotate(-45deg);
 }
 
-.up .line2 {
-    top: -2%;
-}
-
+.tenUp .line1,
+.tenUp .line2,
 .up .line1,
 .up .line2 {
-    border-top: 18px solid #f55;
-    border-right: 18px solid #f55;
+    border-top: 8px solid #f55;
+    border-right: 8px solid #f55;
+    border-left: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    min-width: 20px;
+    min-height: 20px;
 }
-
+.tenDown .line1,
+.tenDown .line2,
 .down .line1,
 .down .line2 {
-    border-bottom: 18px solid #f55;
-    border-left: 18px solid #f55;
+    border-bottom: 8px solid #f55;
+    border-left: 8px solid #f55;
+    border-right: 8px solid transparent;
+    border-top: 8px solid transparent;
+    width: 20px;
+    height: 20px;
 }
 
 .down .line1 {
-    top: -3%;
+    transform: translateY(-25%) rotate(-45deg);
 }
-.down .line2 {
-    top: -22%;
+.tenDown .line2 {
+    transform: translateY(-15px) rotate(-45deg);
 }
