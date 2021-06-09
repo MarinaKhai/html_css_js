@@ -45,7 +45,6 @@ body {
     grid-column-end: 3;
 }
 .digit, .operator {
-
     background-color: rgb(226, 248, 255);
 }
 
@@ -58,20 +57,30 @@ body {
     background-color: rgb(196, 234, 247);
 } */
 
-#window p {
-    margin: 0;
+#main-field {
+    margin: 5px;
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
+    right: 10px;
     height: 100%;
-    font-size: 1em;
+    font-size: 1.2em;
     line-height: 2.4em;
     font-weight: 100;
     color: #333;
     letter-spacing: 1px;
 }
 
+#second-field {
+    margin: 5px;
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    font-size: 0.8em;
+    line-height: 2em;
+    font-weight: 100;
+    color: #333;
+    letter-spacing: 1px;
+}
 
 .grid-container .digit:hover,
 .grid-container .operator:hover {
