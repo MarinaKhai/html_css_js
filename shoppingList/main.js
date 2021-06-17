@@ -45,7 +45,7 @@ addBtn.onclick = function() {
             listItem.style.textDecoration = 'none';
             doneBtn.style.backgroundColor = '#fff';
         }
-
+    }
 }
 
 inputField.onkeydown = function(e) {
