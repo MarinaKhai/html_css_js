@@ -123,9 +123,9 @@ li button {
 
     .add_btn {
         margin: 10px 0 0 0;
-        width: 50%;
+        width: 30%;
         font-size: 1rem;
-        align-self:flex-start;
+        align-self:flex-end;
     }
 
     li button {
