@@ -1,29 +1,34 @@
 body {
     font-family: 'Courier New', Courier, monospace;
     margin: 0 auto;
-    width: fit-content;
-    max-width: 90%;
+    width: 35%;
     box-sizing: border-box;
 }
-.content_container{
-    margin: 20px;
+
+h1 {
+    margin-bottom: 14px;
 }
 
 button {
     border: 1px solid #000;
-    background-color: #000;
-    color: #fff;
+    border-radius: 0;
+    outline: none;
     padding: 5px;
     font-family: inherit;
+    color: #fff;
+    background-color: #000;
+    font-size: 1rem;
+    cursor: pointer;
 }
 
 input {
+    box-sizing: border-box;
     border: 1px solid #000;
     border-radius: 0;
     outline: none;
-    box-shadow: none;
     padding: 5px;
     font-family: inherit;
+    font-size: 1rem;
 }
 
 ol {
@@ -39,11 +44,32 @@ li {
 li button {
     padding: 5px;
     float: right;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     margin-left: 10px;
-    padding: 2px;
     letter-spacing: 1px;
     color: #eee;
+    line-height: 100%;
+}
+
+.content_container{
+    margin: 20px;
+}
+
+.input_container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.add_field {
+    display: block;
+    margin: 10px 0 0 auto;
+    width: 70%;
+}
+
+.add_btn {
+    display: block;
+    margin: 10px 0 0 10px;
+    width: 28%;
 }
 
 .invisible {
@@ -51,18 +77,58 @@ li button {
 }
 
 .invisible.clear {
-    float: right;
     display: block;
-    margin-top: 10px;
+    float: right;
+    margin: 10px 0 0 0;
+    padding: 5px;
     background-color: #fff;
     color: #000;
     font-size: 0.7rem;
+    letter-spacing: 1px;
+    line-height: 80%;
 }
 
-.done-btn {
-    /* background-color: #6b0;
-    border: 1px solid #6b0; */
+.done_btn {
     background-color: #fff;
     color: #000;
     border: 1px solid #000;
+}
+
+
+/* Smaller screens */
+
+@media (max-width: 1024px) {
+    body {
+        width: 60%;
+    }
+
+}
+
+@media (max-width: 640px) {
+    body {
+        width: 96%;
+    }
+
+    .input_container {
+        flex-flow: column;
+        justify-items:flex-start;
+    }
+
+    .add_field {
+        margin: 10px 0 0 0;
+        width: 100%;
+        align-self: center;
+        font-size: 1rem;
+    }
+
+    .add_btn {
+        margin: 10px 0 0 0;
+        width: 50%;
+        font-size: 1rem;
+        align-self:flex-start;
+    }
+
+    li button {
+        font-size: 0.8rem;
+    }
 }
