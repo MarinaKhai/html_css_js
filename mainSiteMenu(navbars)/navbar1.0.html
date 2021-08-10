@@ -1,0 +1,100 @@
+<!-- Minimalist navigation menu with logo, main nav links and a "call to action" button. 
+I Tried to do it as much responsive and elastic as i could, using vw-units and margin:auto
+instead of fixed units like px, wherever possible.
+Only one media query for mobile screens is used. -->
+
+<!-- Thins left to do: change logo to img, not text, add mobile screens viewm check for styles consistency and efficiency -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbar1</title>
+    <style>
+        body {
+            font-family: Arial;
+            box-sizing: border-box;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 15px;
+        }
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-grow: 1;
+            margin: 0 auto 0 0;
+            padding-left: 4vw;
+            border-left: 1px solid #ddd;
+        }
+        .menu a {
+            display: inline-block;
+            margin: 0 auto 0 0;
+            padding: 4px 0;
+            color: #a7a7a7;
+        }
+        .menu .active {
+            color: inherit;
+        }
+        .menu a:hover,
+        .menu a:active {
+            color: inherit;
+        }
+        .menu .contact-link {
+            border: 1px solid #ddd;
+            margin: 0 0 0 auto;
+            padding: 4px 16px;
+            border-radius: 20px;
+            color: inherit;
+            line-height: 1.8;
+        }
+        .menu .contact-link:hover,
+        .menu .contact-link:active {
+            color: inherit;
+            border-color: purple;
+        }
+
+        .logo
+        {
+            padding-top: 4px;
+            padding-bottom: 4px;
+            padding-right: 4vw;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            LogoHere
+        </div>
+        <nav class="menu">
+            <a class="active" href="">Home</a>
+            <a href="">About</a>
+            <a href="">Features</a>
+            <a href="">Services</a>
+            <a href="">Contact Us</a>
+            <a class="contact-link" href="#">Get a free trial</a>
+        </nav>
+    </header>
+
+    <script>
+
+    </script>
+</body>
+</html>
