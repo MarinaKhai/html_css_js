@@ -13,7 +13,7 @@ Only one media query for mobile screens is used. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>navbar1</title>
     <style>
-        body {
+        html, * {
             font-family: Arial;
             box-sizing: border-box;
         }
@@ -34,6 +34,24 @@ Only one media query for mobile screens is used. -->
             margin: 0 auto;
             padding: 15px;
         }
+        .logo
+        {
+            width: 10vw;
+            height: 100%;
+            flex-grow: 0;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            padding-right: 4vw;
+            overflow: hidden;
+        }
+        .logo img {
+            width: 100%;
+            height: 100%;
+            min-height: 90%;
+            max-height: 110%;
+            min-width: 100%;
+            max-width: 120%;
+        }
         .menu {
             display: flex;
             justify-content: space-between;
@@ -48,51 +66,99 @@ Only one media query for mobile screens is used. -->
             margin: 0 auto 0 0;
             padding: 4px 0;
             color: #a7a7a7;
+            transition: 0.25s;
         }
         .menu .active {
-            color: inherit;
+            color: #444;
         }
         .menu a:hover,
         .menu a:active {
-            color: inherit;
+            color: #444;
         }
         .menu .contact-link {
             border: 1px solid #ddd;
             margin: 0 0 0 auto;
-            padding: 4px 16px;
-            border-radius: 20px;
-            color: inherit;
-            line-height: 1.8;
+            padding: 6px 18px;
+            border-radius: 0 20px 0 20px;
+            color: #444;
         }
         .menu .contact-link:hover,
         .menu .contact-link:active {
-            color: inherit;
+            /* color: #a7a7a7; */
             border-color: purple;
+            border-radius: 20px 0 20px 0;
+        }
+        .menu-icon {
+            display: none;
+            border-top: 3px solid #444;
+            border-bottom: 3px solid #444;
+            height:17px;
+            width: 24px;
+            padding: 4px 0;
+            transition: 0.2s width;
+        }
+        .menu-icon_inner {
+            height: 3px;
+            width: 100%;
+            background-color: #444;
+            transition: 0.25s height;
+        }
+        .menu-icon:hover {
+            cursor: pointer;
+            height: 19px;
+            padding-top: 5px;
+            padding-bottom: 5px;
         }
 
-        .logo
-        {
-            padding-top: 4px;
-            padding-bottom: 4px;
-            padding-right: 4vw;
+        @media (max-width: 1080px) {
+            .menu .contact-link{
+                font-size: 0.9rem;
+                padding: 4px 10px;
+            }
+            .logo img {
+                min-width: 120%;
+                max-width: 140%;
+                min-height: 110%;
+                max-width: 140%;
+            }
+
+        }
+        @media (max-width: 800px) {
+            .menu a.nav-link {
+                display: none;
+            }
+            .menu-icon {
+                display: inline-block;
+            }
+            .logo {
+                flex-shrink: 0;
+            }
+            .logo img {
+                min-width: 140%;
+                max-width: 150%;
+                min-height: 140%;
+                max-height: 160%;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <div class="logo">
-            LogoHere
+            <img src="logo2.jpg" alt="logo">
         </div>
         <nav class="menu">
-            <a class="active" href="">Home</a>
-            <a href="">About</a>
-            <a href="">Features</a>
-            <a href="">Services</a>
-            <a href="">Contact Us</a>
+            <div class="menu-icon"> <div class="menu-icon_inner"></div></div>
+            <a class="nav-link active" href="">Home</a>
+            <a class="nav-link" href="">About</a>
+            <a class="nav-link" href="">Features</a>
+            <a class="nav-link" href="">Services</a>
+            <a class="nav-link" href="">Contact Us</a>
             <a class="contact-link" href="#">Get a free trial</a>
         </nav>
     </header>
 
+    <a style="display: block; font-size: 0.8rem; font-style: italic; margin: 70vh 20px 0 20px;" href='https://www.freepik.com/vectors/logo'>Logo vector created by catalyststuff - www.freepik.com</a>
     <script>
 
     </script>

@@ -1,6 +1,8 @@
-body {
-    height: 100vh;
+body, html {
+    height: 100%;
     font-family: Arial, Helvetica, sans-serif;
+margin: 0;
+overflow: hidden;
 }
 
 .grid-container {
