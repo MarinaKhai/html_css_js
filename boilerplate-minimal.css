@@ -1,0 +1,182 @@
+/**
+* A minimalist, flexible, all purpose css styles
+* for quick and comfortable development of responsive web apps.
+*
+* Author: Marina Sh.
+* Source: https://github.com/marinaKhai/
+* Version: 1.0.0 (beta)
+*/
+
+html {
+    box-sizing: border-box;
+    font-size: 18px;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, serif;
+    line-height: 1.4;
+    color: #333;
+    max-width: 1400px;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+ul, ol, li {
+    list-style-type: " - ";
+    list-style-position:inside;
+    padding-left: 42px;
+}
+form>* {
+    display: block;
+    font-family: Roboto, serif;
+    font-size: 1rem;
+    color: #444;
+    padding: 10px 20px;
+    border-radius: 0;
+    border: 1px solid #777;
+    margin: 20px 0 20px 0;
+    width: 100%;
+    outline: none;
+}
+table {
+    border-collapse: collapse;
+    max-width: 100%;
+    width: 100%;
+    margin-top: 40px;
+}
+thead {
+    background-color: #555;
+    color: #fff;
+    font-weight: normal;
+}
+th, td {
+    margin: 0;
+    padding: 10px;
+    border-bottom: 1px solid #777;
+    border-right: 1px solid #777;
+    text-align: left;
+    font-weight: normal;
+
+}
+button,
+[type='button'],
+[type='submit'] {
+    background-color: #fff;
+    font-weight: 100;
+    width: initial;
+    margin-left: auto;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+button:hover,
+button:focus {
+    background-color: #444;
+    color: #fff;
+}
+pre {
+   background-color: #eee;
+   font-size: 0.8rem;
+   line-height: 1.4;
+   padding: 20px 10px;
+}
+h1, h2, h3, h4, h5, h6 {
+    position: relative;
+    font-weight: normal;
+    padding-left: 42px;
+    width:fit-content;
+    margin-top: 40px;
+}
+h1::before, h2::before, h3::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 90px;
+    height: 1px;
+    background: linear-gradient(90deg, #eee, #888);
+}
+h1::before {
+    bottom: -1px;
+    width: 100%;
+    background: linear-gradient(90deg, #eee, #444);
+}
+.container {
+    padding: 0 20px;
+    max-width: 780px;
+    margin: 0 auto;
+}
+.form-container {
+    margin: 40px 0 40px 42px;
+    text-align: center;
+    width: 50%;
+}
+
+@media(max-width: 850px) {
+    body, form>* {
+        font-size: 1.3rem;
+    }
+    h1, h2, h3 {
+        margin: 20px 0 0 0;
+        padding: 0;
+    }
+    .form-container {
+        width: 80%;
+        margin: 40px auto;
+    }
+    .form-container button {
+        width: 100%;
+        background-color: #444;
+        color: #fff
+    }
+    .form-container button:hover,
+    .form-container button:focus {
+        background-color: #222;
+    }
+
+}
+
+@media(max-width: 700px) {
+    h1::before, h2::before, h3::before {
+        width: 0;
+        height: 0;
+        background: none;
+    }
+    h1 {
+        font-size: 7vw;
+    }
+    h2 {
+        margin-top: 40px;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    h3{
+        font-size: 1.3rem;
+        font-weight: bold;
+        padding-left: 20px;
+    }
+    ul, ol {
+        padding-left: 20px;
+    }
+}
+
+@media(max-width: 500px) {
+    body, form>* {
+        font-size: 1.1rem;
+        line-height: 1.5;
+    }
+    h1 {
+        font-weight: bold;
+        font-size: 1.8rem;
+    }
+    .form-container {
+        width: 100%;
+        margin: 20px auto;
+    }
+}
